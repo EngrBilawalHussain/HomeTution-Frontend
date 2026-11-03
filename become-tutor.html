@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Home Tutor - Home Tutor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>📍 Head Office: Islamabad • Join Pakistan's Largest Network of 25,000+ Verified Tutors</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+923087361799">📞 Hotline: +92 308 7361799</a>
+        <a href="https://wa.me/923087361799" target="_blank">💬 WhatsApp: +92 308 7361799</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        Home <span>Tutor</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="request-tutor.html" class="nav-link">Request a Tutor</a></li>
+        <li><a href="tutors.html" class="nav-link">Find Tutors</a></li>
+        <li><a href="assignments.html" class="nav-link">Tuition Jobs</a></li>
+        <li><a href="rates.html" class="nav-link">Tuition Rates</a></li>
+        <li><a href="become-tutor.html" class="nav-link active">Become a Tutor</a></li>
+        <li><a href="admin.html" class="nav-link" style="color: #64748b;">Admin Panel</a></li>
+        <li class="nav-actions-mobile">
+          <a href="request-tutor.html" class="btn btn-primary btn-block">Request a Tutor (Free)</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="request-tutor.html" class="btn btn-primary btn-sm">Request a Tutor</a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <div style="background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); padding: 45px 0 35px; border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <span class="section-tag" style="background: #dcfce7; color: #166534;">Tutor Registration Portal</span>
+      <h1 style="font-size: 2.4rem; color: #0c4a6e; margin-bottom: 10px;">Join Home Tutor as a Private Tutor</h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">
+        Get immediate access to over 100+ daily tuition assignments, daily WhatsApp job broadcasts, and earn high hourly rates with prompt payouts.
+      </p>
+    </div>
+  </div>
+
+  <!-- Benefits Strip -->
+  <section class="section" style="padding: 40px 0; background: white; border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px;">
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🚀</div>
+          <h4 style="margin-bottom: 6px;">100+ Jobs Daily</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Home & online tuition assignments across Lahore, Karachi, Islamabad, Rawalpindi & nationwide.</p>
+        </div>
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">📲</div>
+          <h4 style="margin-bottom: 6px;">Instant WhatsApp Alerts</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Receive curated student inquiries matched to your area, subjects, and preferred timings.</p>
+        </div>
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">💵</div>
+          <h4 style="margin-bottom: 6px;">Earn Top Hourly Rates</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Set your own rates (PKR 1,500 - 6,000+/hr). Transparent commission on 1st month only; keep 100% thereafter.</p>
+        </div>
+        <div style="text-align: center; padding: 20px;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🛡️</div>
+          <h4 style="margin-bottom: 6px;">Verified Parents</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">Zero risk: Our coordinators verify parent location, phone, and requirements before connecting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <div class="section" style="padding: 50px 0 80px;">
+    <div class="container" style="max-width: 800px;">
+      <div class="calc-card" style="padding: 40px;">
+        
+        <form id="tutorRegistrationForm">
+          <h3 style="font-size: 1.4rem; margin-bottom: 6px;">Tutor Profile & Qualifications</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">Complete your profile below to start receiving tuition assignments in Pakistan.</p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="regName">Full Name (as in CNIC) *</label>
+              <input type="text" id="regName" class="form-control" required placeholder="e.g. Muhammad Hamza Tariq" />
+            </div>
+
+            <div class="form-group">
+              <label for="regPhone">Mobile Number (WhatsApp) *</label>
+              <input type="tel" id="regPhone" class="form-control" required placeholder="e.g. 0308 7361799 or +92 308 7361799" />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="regEmail">Email Address *</label>
+              <input type="email" id="regEmail" class="form-control" required placeholder="e.g. hamza@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label>Gender</label>
+              <div style="display: flex; gap: 20px; margin-top: 8px;">
+                <label style="display: flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                  <input type="radio" name="regGender" value="Male" checked /> Male
+                </label>
+                <label style="display: flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                  <input type="radio" name="regGender" value="Female" /> Female
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="regTutorType">Tutor Category *</label>
+              <select id="regTutorType" class="form-control" required>
+                <option value="PART_TIME">Part-Time Student Tutor (LUMS / NUST / FAST / IBA)</option>
+                <option value="FULL_TIME" selected>Full-Time Professional Tutor (Graduate)</option>
+                <option value="MOE_EX_CURRENT">School / College Certified Teacher (Aitchison / LGS / APS)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="regExperience">Years of Tutoring Experience</label>
+              <input type="number" id="regExperience" class="form-control" value="3" min="0" max="40" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regEducation">Highest Degree / Qualifications *</label>
+            <input type="text" id="regEducation" class="form-control" required placeholder="e.g. LUMS B.Sc (Honours), NUST MS Engineering, MBBS, or M.Sc Physics" />
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="regTitle">Headline / Specialist Title</label>
+              <input type="text" id="regTitle" class="form-control" placeholder="e.g. O/A-Level Math & Physics Specialist" />
+            </div>
+
+            <div class="form-group">
+              <label for="regExpectedRate">Expected Hourly Rate (PKR / hr) *</label>
+              <input type="number" id="regExpectedRate" class="form-control" value="2500" min="500" max="25000" step="100" required />
+            </div>
+          </div>
+
+          <!-- Subjects Checkboxes -->
+          <div class="form-group">
+            <label>Subjects You Can Teach</label>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; margin-top: 6px;">
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="subjects" value="Class 1-8 All Subjects" checked /> Class 1-8 All Subjects
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="subjects" value="Matric Science (Math/Phy/Bio/Chem)" checked /> Matric Science
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="subjects" value="FSc Pre-Medical" checked /> FSc Pre-Medical
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="subjects" value="FSc Pre-Engineering / ICS" checked /> FSc Pre-Engg / ICS
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="subjects" value="O-Level Mathematics & Sciences" checked /> O-Level Math & Sciences
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="subjects" value="A-Level Physics / Chemistry / Math" /> A-Level Phy / Chem / Math
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="subjects" value="MDCAT & ECAT Prep" /> MDCAT & ECAT Prep
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="subjects" value="Quran Nazra with Tajweed" /> Quran with Tajweed
+              </label>
+            </div>
+          </div>
+
+          <!-- Preferred Regions -->
+          <div class="form-group">
+            <label>Preferred Tutoring Locations</label>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 6px;">
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="regions" value="Lahore" checked /> Lahore
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="regions" value="Islamabad" checked /> Islamabad
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="regions" value="Rawalpindi" checked /> Rawalpindi
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="regions" value="Karachi" checked /> Karachi
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="regions" value="Faisalabad" /> Faisalabad
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="regions" value="Multan" /> Multan
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+                <input type="checkbox" name="regions" value="Online" checked /> Nationwide (Online via Zoom)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="regBio">About Yourself & Track Record *</label>
+            <textarea id="regBio" class="form-control" rows="4" required placeholder="Highlight your academic grades (e.g. Straight A*s in O/A-Levels, 1050+ in Matric/FSc, top position at LUMS/NUST), student grade jumps, and teaching methodology."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 20px;">
+            Submit Tutor Application →
+          </button>
+        </form>
+
+        <!-- Success Message Block -->
+        <div id="regSuccessCard" style="display: none; text-align: center; padding: 30px 10px;">
+          <div style="width: 70px; height: 70px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px;">
+            ✓
+          </div>
+          <h2 style="color: #0c4a6e; margin-bottom: 10px;">Application Submitted Successfully!</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 25px;">
+            Welcome aboard, <strong id="successTutorName">Tutor</strong>! Our Pakistani coordinator team is reviewing your credentials.
+          </p>
+          <div style="background: var(--bg-light); border-radius: 12px; padding: 20px; max-width: 500px; margin: 0 auto 25px; text-align: left; font-size: 0.92rem;">
+            <p style="margin-bottom: 8px;"><strong>📲 WhatsApp Verification:</strong> We will message you at <span id="successTutorPhone">+92 308 ...</span> to verify your degrees and CNIC.</p>
+            <p><strong>📋 Immediate Access:</strong> You can start browsing and applying for live tuition jobs across Pakistan right now!</p>
+          </div>
+          <a href="assignments.html" class="btn btn-primary btn-lg">Browse Live Tuition Jobs Now →</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0;">
+        <p>&copy; 2026 Home Tutor. All rights reserved.</p>
+        <p>Spring Boot Kotlin & HTML/CSS/JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/become-tutor.js"></script>
+</body>
+</html>

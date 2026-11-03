@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Tuition Assignments - Home Tutor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .region-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .region-tab {
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      background: white;
+      border: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .region-tab:hover,
+    .region-tab.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>📍 Head Office: Islamabad • 100+ New Tuition Assignments Posted Daily</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+923087361799">📞 Hotline: +92 308 7361799</a>
+        <a href="https://wa.me/923087361799" target="_blank">💬 WhatsApp: +92 308 7361799</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        Home <span>Tutor</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="request-tutor.html" class="nav-link">Request a Tutor</a></li>
+        <li><a href="tutors.html" class="nav-link">Find Tutors</a></li>
+        <li><a href="assignments.html" class="nav-link active">Tuition Jobs</a></li>
+        <li><a href="rates.html" class="nav-link">Tuition Rates</a></li>
+        <li><a href="become-tutor.html" class="nav-link">Become a Tutor</a></li>
+        <li><a href="admin.html" class="nav-link" style="color: #64748b;">Admin Panel</a></li>
+        <li class="nav-actions-mobile">
+          <a href="request-tutor.html" class="btn btn-primary btn-block">Request a Tutor (Free)</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="become-tutor.html" class="btn btn-outline btn-sm">Tutor Sign Up</a>
+        <a href="request-tutor.html" class="btn btn-primary btn-sm">Request a Tutor</a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 35px 0 25px; border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <div>
+          <h1 style="font-size: 2.2rem; color: #0c4a6e; margin-bottom: 6px;">Live Tuition Assignments</h1>
+          <p style="color: var(--text-muted); font-size: 1rem;" id="assignmentCount">Available Tuition Jobs across Pakistan</p>
+        </div>
+        <div>
+          <a href="become-tutor.html" class="btn btn-primary">Register as Tutor for WhatsApp Job Alerts →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="section" style="padding: 40px 0 80px;">
+    <div class="container">
+      
+      <!-- Filter Controls -->
+      <div style="background: white; border-radius: 12px; border: 1px solid var(--border-color); padding: 20px; margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+        <div class="region-tabs">
+          <button class="region-tab active" data-region="ALL">All Pakistan</button>
+          <button class="region-tab" data-region="Lahore">Lahore (DHA, Gulberg, Johar Town, Model Town)</button>
+          <button class="region-tab" data-region="Islamabad">Islamabad (F-Sectors, DHA, Bahria)</button>
+          <button class="region-tab" data-region="Rawalpindi">Rawalpindi (Bahria Town, Saddar)</button>
+          <button class="region-tab" data-region="Karachi">Karachi (Clifton, DHA, Gulshan, PECHS)</button>
+          <button class="region-tab" data-region="Online">Online / Other Cities</button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px;">
+          <input type="text" id="searchAssignKeyword" class="form-control" placeholder="Search by subject, city, or code (e.g. PK-8101, Physics, Lahore)..." />
+          <select id="filterAssignLevel" class="form-control">
+            <option value="">All Academic Levels</option>
+            <option value="Primary">Primary (Class 1-5)</option>
+            <option value="Middle">Middle (Class 6-8)</option>
+            <option value="Matric">Matric / SSC (9th-10th)</option>
+            <option value="FSc">FSc / ICS (11th-12th)</option>
+            <option value="O-Level">O-Level (Cambridge)</option>
+            <option value="A-Level">A-Level (Cambridge)</option>
+            <option value="MDCAT">Entry Test (MDCAT/ECAT)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Assignments List -->
+      <div class="assignment-grid" id="assignmentsContainer">
+        <!-- Rendered by assignments.js -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Apply for Assignment Modal -->
+  <div class="modal-overlay" id="applyModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">×</button>
+      <div style="margin-bottom: 20px;">
+        <span class="badge badge-blue" id="applyAssignmentCode">PK-8101</span>
+        <h3 id="applyAssignmentTitle" style="font-size: 1.3rem; margin: 8px 0;">O-Level - Pure Physics</h3>
+        <p style="color: #0f766e; font-weight: 700; font-size: 1.1rem;" id="applyAssignmentRate">PKR 3,500 / hr</p>
+      </div>
+
+      <form id="assignmentApplyForm">
+        <input type="hidden" id="applyAssignmentId" />
+        
+        <div class="form-group">
+          <label>Your Name (Tutor) *</label>
+          <input type="text" id="tutorName" class="form-control" required placeholder="e.g. Sir Muhammad Hamza" />
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number / WhatsApp in Pakistan *</label>
+          <input type="tel" id="tutorPhone" class="form-control" required placeholder="e.g. 0308 7361799 or +92 308 7361799" />
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Coordinator will WhatsApp you the student profile if shortlisted.</div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="tutorEmail" class="form-control" placeholder="e.g. tutor@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label>Academic Credentials & Degree *</label>
+          <input type="text" id="tutorCredentials" class="form-control" required placeholder="e.g. LUMS B.Sc (Honours), Ex-Aitchison Faculty" />
+        </div>
+
+        <div class="form-group">
+          <label>Expected Hourly Rate (PKR / hr)</label>
+          <input type="number" id="expectedRate" class="form-control" placeholder="e.g. 3500" />
+        </div>
+
+        <div class="form-group">
+          <label>Pitch to Parent (Experience & Track Record) *</label>
+          <textarea id="tutorPitch" class="form-control" rows="3" required placeholder="Briefly introduce your relevant teaching experience and track record in this subject."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 15px;">
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0;">
+        <p>&copy; 2026 Home Tutor. All rights reserved.</p>
+        <p>Spring Boot Kotlin & HTML/CSS/JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assignments.js"></script>
+</body>
+</html>

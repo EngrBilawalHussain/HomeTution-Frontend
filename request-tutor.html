@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Home Tutor - Home Tutor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>📍 Head Office: Islamabad • 100% Free Tutor Matching Across Pakistan</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+923087361799">📞 Hotline: +92 308 7361799</a>
+        <a href="https://wa.me/923087361799" target="_blank">💬 WhatsApp: +92 308 7361799</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        Home <span>Tutor</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="request-tutor.html" class="nav-link active">Request a Tutor</a></li>
+        <li><a href="tutors.html" class="nav-link">Find Tutors</a></li>
+        <li><a href="assignments.html" class="nav-link">Tuition Jobs</a></li>
+        <li><a href="rates.html" class="nav-link">Tuition Rates</a></li>
+        <li><a href="become-tutor.html" class="nav-link">Become a Tutor</a></li>
+        <li><a href="admin.html" class="nav-link" style="color: #64748b;">Admin Panel</a></li>
+        <li class="nav-actions-mobile">
+          <a href="request-tutor.html" class="btn btn-primary btn-block">Request a Tutor (Free)</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="become-tutor.html" class="btn btn-outline btn-sm">Tutor Sign Up</a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 40px 0 30px; border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <span class="section-tag">Takes Only 2 Minutes</span>
+      <h1 style="font-size: 2.4rem; color: #0c4a6e; margin-bottom: 10px;">Request a Private Home Tutor</h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">
+        Fill in your requirements below. Our experienced tuition coordinators will handpick 3-5 verified tutor profiles and contact you within 24 hours.
+      </p>
+    </div>
+  </div>
+
+  <!-- Wizard Container -->
+  <div class="section" style="padding: 40px 0 80px;">
+    <div class="container" style="max-width: 760px;">
+      <div class="calc-card" style="padding: 40px;">
+        
+        <!-- Wizard Progress Bar -->
+        <div class="wizard-progress">
+          <div class="wizard-step-indicator active">
+            <div class="step-circle">1</div>
+            <div class="step-label">Academic Needs</div>
+          </div>
+          <div class="wizard-step-indicator">
+            <div class="step-circle">2</div>
+            <div class="step-label">Tutor Preference</div>
+          </div>
+          <div class="wizard-step-indicator">
+            <div class="step-circle">3</div>
+            <div class="step-label">Location & Budget</div>
+          </div>
+          <div class="wizard-step-indicator">
+            <div class="step-circle">4</div>
+            <div class="step-label">Contact Details</div>
+          </div>
+        </div>
+
+        <form id="tutorRequestWizard">
+          
+          <!-- STEP 1: Academic Needs -->
+          <div class="wizard-step-content" id="stepContent1">
+            <h3 style="margin-bottom: 6px;">Step 1: Student Academic Level & Subject</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 0.9rem;">What syllabus and subjects does the student require assistance in?</p>
+
+            <div class="form-group">
+              <label for="studentLevel">Student Academic Level *</label>
+              <select id="studentLevel" class="form-control" required>
+                <option value="" disabled selected>-- Select Academic Level --</option>
+                <optgroup label="Primary School">
+                  <option value="Primary (Class 1 - 3)">Primary (Class 1 - 3)</option>
+                  <option value="Primary (Class 4 - 5)">Primary (Class 4 - 5)</option>
+                </optgroup>
+                <optgroup label="Middle School">
+                  <option value="Middle (Class 6 - 8)">Middle (Class 6 - 8)</option>
+                </optgroup>
+                <optgroup label="Matriculation (BISE / Federal Board)">
+                  <option value="Matric 9th Class (Science)">Matric 9th Class (Science)</option>
+                  <option value="Matric 10th Class (Science)">Matric 10th Class (Science)</option>
+                  <option value="Matric (Arts / General)">Matric (Arts / General)</option>
+                </optgroup>
+                <optgroup label="Intermediate (HSSC)">
+                  <option value="FSc Pre-Medical (11th - 12th)">FSc Pre-Medical (11th - 12th)</option>
+                  <option value="FSc Pre-Engineering (11th - 12th)">FSc Pre-Engineering (11th - 12th)</option>
+                  <option value="ICS (Computer Science)">ICS (Computer Science)</option>
+                  <option value="I.Com / FA">I.Com / FA</option>
+                </optgroup>
+                <optgroup label="Cambridge International (CAIE)">
+                  <option value="O-Level (Cambridge / Edexcel)">O-Level (Cambridge / Edexcel)</option>
+                  <option value="A-Level (Cambridge / Edexcel)">A-Level (Cambridge / Edexcel)</option>
+                  <option value="IGCSE">IGCSE</option>
+                </optgroup>
+                <optgroup label="Entry Test & Islamic Studies">
+                  <option value="MDCAT (Medical College Entry Test)">MDCAT (Medical College Entry Test)</option>
+                  <option value="ECAT / NUST (NET) / FAST">ECAT / NUST (NET) / FAST</option>
+                  <option value="Quran, Tajweed & Islamic Studies">Quran, Tajweed & Islamic Studies</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="subjects">Subject(s) Required *</label>
+              <input type="text" id="subjects" class="form-control" placeholder="e.g. Additional Mathematics, Pure Chemistry, English" required />
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">For multiple subjects, separate with commas.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="studentRequirements">Student Weaknesses or Special Remarks (Optional)</label>
+              <textarea id="studentRequirements" class="form-control" rows="3" placeholder="e.g. Scored C6 in mid-years, needs help with Paper 2 heuristics math problem sums, prefers patient tutor."></textarea>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; margin-top: 25px;">
+              <button type="button" class="btn btn-primary btn-wizard-next">Next: Tutor Preference →</button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Tutor Preference & Schedule -->
+          <div class="wizard-step-content" id="stepContent2" style="display: none;">
+            <h3 style="margin-bottom: 6px;">Step 2: Tutor Preference & Schedule</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 0.9rem;">What tier of tutor and schedule fits your learning routine?</p>
+
+            <div class="form-group">
+              <label for="preferredTutorType">Preferred Tutor Category</label>
+              <select id="preferredTutorType" class="form-control">
+                <option value="FULL_TIME" selected>Full-Time Professional Tutor (Most Popular)</option>
+                <option value="MOE_EX_CURRENT">School / College Certified Teacher (Top Tier)</option>
+                <option value="PART_TIME">Part-Time Student Tutor (LUMS / NUST / FAST)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Tutor Gender Preference</label>
+              <div style="display: flex; gap: 20px; margin-top: 8px;">
+                <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                  <input type="radio" name="genderPreference" value="Any" checked /> No Preference
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                  <input type="radio" name="genderPreference" value="Female" /> Female Only
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                  <input type="radio" name="genderPreference" value="Male" /> Male Only
+                </label>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label for="lessonsPerWeek">Lessons / Week</label>
+                <select id="lessonsPerWeek" class="form-control">
+                  <option value="1">1 lesson / week</option>
+                  <option value="2">2 lessons / week</option>
+                  <option value="3" selected>3 lessons / week (Standard)</option>
+                  <option value="4">4 lessons / week</option>
+                  <option value="5">5 lessons / week</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="hoursPerLesson">Hours / Lesson</label>
+                <select id="hoursPerLesson" class="form-control">
+                  <option value="1.0">1.0 hour</option>
+                  <option value="1.5" selected>1.5 hours (Standard)</option>
+                  <option value="2.0">2.0 hours</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="preferredTiming">Preferred Day(s) and Time</label>
+              <input type="text" id="preferredTiming" class="form-control" placeholder="e.g. Mon/Wed/Fri after 5pm, or Weekend mornings" />
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 25px;">
+              <button type="button" class="btn btn-outline btn-wizard-prev">← Back</button>
+              <button type="button" class="btn btn-primary btn-wizard-next">Next: Location & Budget →</button>
+            </div>
+          </div>
+
+          <!-- STEP 3: Location & Budget -->
+          <div class="wizard-step-content" id="stepContent3" style="display: none;">
+            <h3 style="margin-bottom: 6px;">Step 3: Location & Target Budget</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 0.9rem;">Where will the home tuition take place?</p>
+
+            <div class="form-group">
+              <label for="location">City & Area / Address in Pakistan *</label>
+              <input type="text" id="location" class="form-control" placeholder="e.g. DHA Phase 5, Lahore or Sector F-10, Islamabad or Clifton, Karachi" required />
+            </div>
+
+            <div class="form-group">
+              <label for="postalCode">Pakistan Postal Code (5 Digits, Optional)</label>
+              <input type="text" id="postalCode" class="form-control" placeholder="e.g. 54000 for Lahore, 44000 for Islamabad" maxlength="5" />
+            </div>
+
+            <div class="form-group">
+              <label for="budgetPerHour">Target Hourly Budget (PKR / hr)</label>
+              <input type="number" id="budgetPerHour" class="form-control" value="2500" min="500" max="25000" step="100" />
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+                Average market rates: Matric (PKR 1,500 - 2,800/hr) | FSc/ICS (PKR 2,000 - 3,500/hr) | O/A-Levels & MDCAT (PKR 3,000 - 6,500/hr).
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 25px;">
+              <button type="button" class="btn btn-outline btn-wizard-prev">← Back</button>
+              <button type="button" class="btn btn-primary btn-wizard-next">Next: Contact Info →</button>
+            </div>
+          </div>
+
+          <!-- STEP 4: Parent Contact Details -->
+          <div class="wizard-step-content" id="stepContent4" style="display: none;">
+            <h3 style="margin-bottom: 6px;">Step 4: Your Contact Information</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 0.9rem;">Where should our tuition coordinators send the shortlisted tutor profiles?</p>
+
+            <div class="form-group">
+              <label for="parentName">Your Name (Parent / Student) *</label>
+              <input type="text" id="parentName" class="form-control" placeholder="e.g. Dr. Malik Aslam" required />
+            </div>
+
+            <div class="form-group">
+              <label for="parentPhone">Phone Number / WhatsApp in Pakistan *</label>
+              <input type="tel" id="parentPhone" class="form-control" placeholder="e.g. 0300 1234567 or +92 300 1234567" required />
+              <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">
+                Shortlisted tutor profiles and credentials will be sent to this WhatsApp number within 1-12 hours.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="parentEmail">Email Address (Optional)</label>
+              <input type="email" id="parentEmail" class="form-control" placeholder="e.g. aslam@example.com" />
+            </div>
+
+            <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 14px 18px; border-radius: 8px; font-size: 0.88rem; color: #166534; margin: 20px 0;">
+              🔒 <strong>Our Guarantee:</strong> 100% Free matching service. No upfront commitment or registration fee. If the tutor isn't a good fit after the first lesson, we provide immediate free replacement.
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 25px;">
+              <button type="button" class="btn btn-outline btn-wizard-prev">← Back</button>
+              <button type="submit" class="btn btn-primary btn-lg">Submit Tutor Request (Free) →</button>
+            </div>
+          </div>
+
+        </form>
+
+        <!-- Confirmation State Screen -->
+        <div id="wizardConfirmation" style="display: none; text-align: center; padding: 30px 10px;">
+          <div style="width: 70px; height: 70px; background: #dcfce7; color: #16a34a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin: 0 auto 20px;">
+            ✓
+          </div>
+          <h2 style="color: #0c4a6e; margin-bottom: 12px;">Request Received Successfully!</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 500px; margin: 0 auto 25px;">
+            Thank you, <strong id="confirmParentName">Parent</strong>! Our coordinators are reviewing your request for <strong id="confirmSubject">Subject</strong>.
+          </p>
+
+          <div style="background: var(--bg-light); border-radius: 12px; padding: 20px; max-width: 450px; margin: 0 auto 30px; text-align: left; font-size: 0.92rem;">
+            <p style="margin-bottom: 8px;"><strong>📞 WhatsApp Updates:</strong> We will text you at <span id="confirmPhone">+92 308 ...</span> within 1 to 12 hours.</p>
+            <p style="margin-bottom: 8px;"><strong>📋 Profiles Shortlist:</strong> You will receive 3 to 5 tailored tutor profiles with full credentials.</p>
+            <p><strong>⭐ 0% Fee:</strong> 100% free service for parents.</p>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 16px;">
+            <a href="index.html" class="btn btn-outline">Back to Home</a>
+            <a href="https://wa.me/923087361799" target="_blank" class="btn btn-primary">Chat on WhatsApp Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0;">
+        <p>&copy; 2026 Home Tutor. All rights reserved.</p>
+        <p>Spring Boot Kotlin & HTML/CSS/JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/request-tutor.js"></script>
+</body>
+</html>

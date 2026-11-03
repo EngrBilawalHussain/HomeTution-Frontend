@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakistan Tuition Rates Guide 2026 - Home Tutor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>📍 Head Office: Islamabad • Pakistan's Most Authoritative Tuition Rates Guide (PKR)</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+923087361799">📞 Hotline: +92 308 7361799</a>
+        <a href="https://wa.me/923087361799" target="_blank">💬 WhatsApp: +92 308 7361799</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        Home <span>Tutor</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="request-tutor.html" class="nav-link">Request a Tutor</a></li>
+        <li><a href="tutors.html" class="nav-link">Find Tutors</a></li>
+        <li><a href="assignments.html" class="nav-link">Tuition Jobs</a></li>
+        <li><a href="rates.html" class="nav-link active">Tuition Rates</a></li>
+        <li><a href="become-tutor.html" class="nav-link">Become a Tutor</a></li>
+        <li><a href="admin.html" class="nav-link" style="color: #64748b;">Admin Panel</a></li>
+        <li class="nav-actions-mobile">
+          <a href="request-tutor.html" class="btn btn-primary btn-block">Request a Tutor (Free)</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="request-tutor.html" class="btn btn-primary btn-sm">Request a Tutor</a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 40px 0 30px; border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="text-align: center; max-width: 850px;">
+      <span class="section-tag">2026 Pakistan Market Benchmarks</span>
+      <h1 style="font-size: 2.4rem; color: #0c4a6e; margin-bottom: 10px;">Pakistan Home Tuition Rates Guide (PKR)</h1>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">
+        Complete, transparent overview of private home and online tuition market hourly rates in Pakistan across all academic levels and tutor categories.
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Rates Table & Calculator Section -->
+  <div class="section" style="padding: 40px 0 80px;">
+    <div class="container">
+      
+      <!-- Interactive Calculator Card -->
+      <div class="calc-card" style="margin-bottom: 50px;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">🧮 Interactive Tuition Cost Calculator (PKR)</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+          Select your target level, tutor qualification, and frequency to calculate estimated weekly and monthly tuition fees.
+        </p>
+
+        <form id="rateCalcForm">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+            <div class="form-group">
+              <label>Academic Level</label>
+              <select id="calcLevel" class="form-control">
+                <option value="Primary (Class 1 - 5)">Primary (Class 1 - 5)</option>
+                <option value="Middle (Class 6 - 8)">Middle (Class 6 - 8)</option>
+                <option value="Matric / SSC (9th - 10th Class)">Matric / SSC (9th - 10th)</option>
+                <option value="FSc / ICS / I.Com (11th - 12th)">FSc / ICS (11th - 12th)</option>
+                <option value="O-Level (Cambridge / Edexcel)" selected>O-Level (Cambridge)</option>
+                <option value="A-Level (Cambridge / Edexcel)">A-Level (Cambridge)</option>
+                <option value="Entry Test (MDCAT / ECAT / NET)">Entry Test (MDCAT / ECAT)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Tutor Category</label>
+              <select id="calcTutorType" class="form-control">
+                <option value="PART_TIME">Part-Time Student Tutor (LUMS / NUST)</option>
+                <option value="FULL_TIME" selected>Full-Time Professional Tutor</option>
+                <option value="MOE_EX_CURRENT">Certified School/College Teacher</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Lessons / Week</label>
+              <select id="calcLessons" class="form-control">
+                <option value="1">1 lesson / week</option>
+                <option value="2">2 lessons / week</option>
+                <option value="3" selected>3 lessons / week</option>
+                <option value="4">4 lessons / week</option>
+                <option value="5">5 lessons / week</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Hours / Lesson</label>
+              <select id="calcHours" class="form-control">
+                <option value="1.0">1.0 hour</option>
+                <option value="1.5" selected>1.5 hours (Standard)</option>
+                <option value="2.0">2.0 hours</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-result-box" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; align-items: center;">
+            <div>
+              <div style="font-size: 0.85rem; opacity: 0.9;">Estimated Hourly Rate</div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #fef08a;" id="resHourlyRate">PKR 2,000 - 3,500 / hr</div>
+            </div>
+            <div>
+              <div style="font-size: 0.85rem; opacity: 0.9;">Estimated Weekly Total</div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #7dd3fc;" id="resWeeklyCost">PKR 9,000 - 15,750</div>
+            </div>
+            <div>
+              <div style="font-size: 0.85rem; opacity: 0.9;">Estimated Monthly Investment (4 weeks)</div>
+              <div class="calc-price" id="resMonthlyCost" style="margin: 0; font-size: 2rem;">PKR 36,000 - 63,000</div>
+            </div>
+          </div>
+          <div style="margin-top: 15px; font-size: 0.88rem; color: var(--text-muted); text-align: center;" id="resRecommendation">
+            Most popular choice: Full-time professional tutors offer dedicated board past papers analysis and flexible timings.
+          </div>
+        </form>
+      </div>
+
+      <!-- Official Rates Table -->
+      <h2 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--text-dark);">Official Market Rates Matrix (PKR)</h2>
+      <div class="rates-table-wrapper" style="margin-bottom: 50px;">
+        <table class="rates-table">
+          <thead>
+            <tr>
+              <th style="width: 28%;">Level / Syllabus</th>
+              <th style="width: 24%;">Part-Time Tutors (LUMS/NUST)</th>
+              <th style="width: 24%;">Full-Time Tutors (Professional)</th>
+              <th style="width: 24%;">Certified School/College Faculty</th>
+            </tr>
+          </thead>
+          <tbody id="ratesTableBody">
+            <!-- Dynamically populated by rates.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Explanations of Tutor Categories -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 60px;">
+        <div style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 25px;">
+          <span class="badge badge-blue" style="margin-bottom: 12px;">Tier 1</span>
+          <h3 style="margin-bottom: 8px;">Part-Time Student Tutors</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 14px;">
+            Top undergraduates from LUMS, NUST, FAST, IBA, GIKI, or UET who excelled in their recent board and CAIE exams.
+          </p>
+          <ul style="font-size: 0.85rem; color: #475569; list-style: square; padding-left: 18px;">
+            <li>Relatable peer mentor for younger students</li>
+            <li>Cost-effective for homework help, maths & science basics</li>
+            <li>Best for Primary, Middle, and Matric levels</li>
+          </ul>
+        </div>
+
+        <div style="background: white; border: 2px solid var(--primary); border-radius: 12px; padding: 25px; box-shadow: var(--shadow-md);">
+          <span class="badge badge-green" style="margin-bottom: 12px;">Most Popular</span>
+          <h3 style="margin-bottom: 8px;">Full-Time Professional Tutors</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 14px;">
+            Dedicated degree graduates who teach professionally with years of 1-to-1 home and online experience.
+          </p>
+          <ul style="font-size: 0.85rem; color: #475569; list-style: square; padding-left: 18px;">
+            <li>Comprehensive notes, board past papers & topical worksheets</li>
+            <li>Reliable schedules without university exam interruptions</li>
+            <li>Ideal for Matric, FSc, O-Level, and A-Level students</li>
+          </ul>
+        </div>
+
+        <div style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 25px;">
+          <span class="badge badge-orange" style="margin-bottom: 12px;">Top Tier</span>
+          <h3 style="margin-bottom: 8px;">Certified School/College Faculty</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 14px;">
+            Experienced educators currently teaching or ex-faculty from Aitchison, Beaconhouse, LGS, APS, Roots, and top colleges.
+          </p>
+          <ul style="font-size: 0.85rem; color: #475569; list-style: square; padding-left: 18px;">
+            <li>Deep mastery of board & CAIE marking scheme nuances</li>
+            <li>Rapid grade turnaround for high-stakes exams</li>
+            <li>Essential for MDCAT, ECAT, A-Levels, and board positions</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom CTA Banner -->
+      <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 16px; padding: 35px; text-align: center;">
+        <h3 style="font-size: 1.6rem; color: #0c4a6e; margin-bottom: 8px;">Find a Verified Tutor Within Your Budget Today</h3>
+        <p style="color: #0369a1; font-size: 1rem; max-width: 600px; margin: 0 auto 20px;">
+          100% free matching for parents across Pakistan. We connect you with vetted teachers matching your exact location and budget.
+        </p>
+        <a href="request-tutor.html" class="btn btn-primary btn-lg">Request a Tutor in Pakistan (Free)</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0;">
+        <p>&copy; 2026 Home Tutor. All rights reserved.</p>
+        <p>Spring Boot Kotlin & HTML/CSS/JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/rates.js"></script>
+</body>
+</html>

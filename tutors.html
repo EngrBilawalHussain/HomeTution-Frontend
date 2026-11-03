@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Verified Home Tutors - Home Tutor</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>📍 Head Office: Islamabad • Over 25,000 Verified Tutors across Pakistan</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+923087361799">📞 Hotline: +92 308 7361799</a>
+        <a href="https://wa.me/923087361799" target="_blank">💬 WhatsApp: +92 308 7361799</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        Home <span>Tutor</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="request-tutor.html" class="nav-link">Request a Tutor</a></li>
+        <li><a href="tutors.html" class="nav-link active">Find Tutors</a></li>
+        <li><a href="assignments.html" class="nav-link">Tuition Jobs</a></li>
+        <li><a href="rates.html" class="nav-link">Tuition Rates</a></li>
+        <li><a href="become-tutor.html" class="nav-link">Become a Tutor</a></li>
+        <li><a href="admin.html" class="nav-link" style="color: #64748b;">Admin Panel</a></li>
+        <li class="nav-actions-mobile">
+          <a href="request-tutor.html" class="btn btn-primary btn-block">Request a Tutor (Free)</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="request-tutor.html" class="btn btn-primary btn-sm">Request a Tutor</a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 35px 0 25px; border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <h1 style="font-size: 2.2rem; color: #0c4a6e; margin-bottom: 8px;">Browse Verified Home Tutors</h1>
+      <p style="color: var(--text-muted); font-size: 1rem;" id="tutorsCount">Showing all verified tutors in Pakistan</p>
+    </div>
+  </div>
+
+  <!-- Main Directory Layout -->
+  <div class="section" style="padding: 40px 0 70px;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 30px; align-items: start;">
+        
+        <!-- Sidebar Filters -->
+        <div style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; position: sticky; top: 95px; box-shadow: var(--shadow-sm);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3 style="font-size: 1.15rem; font-weight: 700;">Filter Tutors</h3>
+            <button id="resetFiltersBtn" style="background: none; border: none; color: var(--primary); font-size: 0.85rem; font-weight: 600; cursor: pointer;">Reset All</button>
+          </div>
+
+          <div class="form-group">
+            <label for="searchQuery">Search Keyword</label>
+            <input type="text" id="searchQuery" class="form-control" placeholder="Tutor name, subject, university..." />
+          </div>
+
+          <div class="form-group">
+            <label for="filterLevel">Academic Level</label>
+            <select id="filterLevel" class="form-control">
+              <option value="">All Levels</option>
+              <option value="Primary">Primary (Class 1 - 5)</option>
+              <option value="Middle">Middle (Class 6 - 8)</option>
+              <option value="Matric">Matric / SSC (9th - 10th)</option>
+              <option value="FSc">FSc / ICS (11th - 12th)</option>
+              <option value="O-Level">O-Level (Cambridge)</option>
+              <option value="A-Level">A-Level (Cambridge)</option>
+              <option value="MDCAT">Entry Test (MDCAT/ECAT)</option>
+              <option value="Quran">Quran & Tajweed</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="filterType">Tutor Category</label>
+            <select id="filterType" class="form-control">
+              <option value="">All Categories</option>
+              <option value="PART_TIME">Part-Time Student (LUMS/NUST)</option>
+              <option value="FULL_TIME">Full-Time Professional Tutor</option>
+              <option value="MOE_EX_CURRENT">Certified School/College Teacher</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="filterRegion">City / Region</label>
+            <select id="filterRegion" class="form-control">
+              <option value="">All Pakistan</option>
+              <option value="Lahore">Lahore</option>
+              <option value="Islamabad">Islamabad</option>
+              <option value="Rawalpindi">Rawalpindi</option>
+              <option value="Karachi">Karachi</option>
+              <option value="Faisalabad">Faisalabad</option>
+              <option value="Multan">Multan</option>
+              <option value="Peshawar">Peshawar</option>
+              <option value="Online">Online / All Pakistan</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <label for="filterMaxRate" style="margin-bottom: 0;">Max Hourly Rate</label>
+              <span id="maxRateDisplay" style="font-weight: 700; color: var(--primary);">PKR 10,000/hr</span>
+            </div>
+            <input type="range" id="filterMaxRate" min="500" max="10000" step="250" value="10000" style="width: 100%; cursor: pointer;" />
+          </div>
+
+          <div style="background: #f8fafc; border-radius: 8px; padding: 14px; margin-top: 25px; font-size: 0.82rem; color: #64748b;">
+            💡 <strong>Can't find what you need?</strong> Let our coordinators match you directly based on your schedule and budget for free.
+            <div style="margin-top: 10px;">
+              <a href="request-tutor.html" class="btn btn-primary btn-block btn-sm">Request Free Match</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tutors Grid -->
+        <div>
+          <div class="tutor-grid" id="tutorsGrid">
+            <!-- Rendered by tutors.js -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Tutor Request Modal -->
+  <div class="modal-overlay" id="tutorModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">×</button>
+      <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 20px;">
+        <img id="modalTutorAvatar" src="" alt="Tutor" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+        <div>
+          <h3 id="modalTutorName">Tutor Name</h3>
+          <p id="modalTutorTitle" style="font-size: 0.85rem; color: var(--text-muted);"></p>
+          <p id="modalTutorRate" style="font-weight: 700; color: var(--primary);"></p>
+        </div>
+      </div>
+
+      <form id="modalRequestForm">
+        <input type="hidden" id="modalTutorId" />
+        <div class="form-group">
+          <label>Parent / Student Name *</label>
+          <input type="text" id="modalParentName" class="form-control" required placeholder="e.g. Dr. Salman Khan" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number / WhatsApp *</label>
+          <input type="tel" id="modalParentPhone" class="form-control" required placeholder="e.g. 0308 7361799 or +92 308 7361799" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="modalParentEmail" class="form-control" placeholder="e.g. parent@example.com" />
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label>Student Level *</label>
+            <input type="text" id="modalStudentLevel" class="form-control" required placeholder="e.g. O-Level or Matric" />
+          </div>
+          <div class="form-group">
+            <label>Subject *</label>
+            <input type="text" id="modalSubjects" class="form-control" required placeholder="e.g. Mathematics & Physics" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>City & Area in Pakistan *</label>
+          <input type="text" id="modalLocation" class="form-control" required placeholder="e.g. DHA Phase 5, Lahore" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 15px;">
+          Confirm Tutor Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0;">
+        <p>&copy; 2026 Home Tutor. All rights reserved.</p>
+        <p>Spring Boot Kotlin & HTML/CSS/JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/tutors.js"></script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Tutor - Pakistan's Leading Home Tuition Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Notification Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>📍 Head Office: Islamabad • 100% Free Tutor Matching Across Pakistan</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+923087361799">📞 Hotline: +92 308 7361799</a>
+        <a href="https://wa.me/923087361799" target="_blank">💬 WhatsApp: +92 308 7361799</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🎓</div>
+        Home <span>Tutor</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="request-tutor.html" class="nav-link">Request a Tutor</a></li>
+        <li><a href="tutors.html" class="nav-link">Find Tutors</a></li>
+        <li><a href="assignments.html" class="nav-link">Tuition Jobs</a></li>
+        <li><a href="rates.html" class="nav-link">Tuition Rates</a></li>
+        <li><a href="become-tutor.html" class="nav-link">Become a Tutor</a></li>
+        <li><a href="admin.html" class="nav-link" style="color: #64748b;">Admin Panel</a></li>
+        <li class="nav-actions-mobile">
+          <a href="request-tutor.html" class="btn btn-primary btn-block">Request a Tutor (Free)</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="become-tutor.html" class="btn btn-outline btn-sm">Tutor Sign Up</a>
+        <a href="request-tutor.html" class="btn btn-primary btn-sm">Request a Tutor</a>
+      </div>
+
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="section-tag">Pakistan's #1 Most Trusted Home Tuition Network</div>
+        <h1>Find The Perfect <mark>Home Tutor</mark> in Pakistan Within 24 Hours</h1>
+        <p class="hero-subtitle">
+          Over 25,000 verified school teachers, university toppers from LUMS, NUST, FAST, and experienced subject specialists ready for 1-to-1 home and online tuition across Lahore, Karachi, Islamabad, Rawalpindi, and all major cities in Pakistan.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge-item">✓ 100% Free for Parents</div>
+          <div class="hero-badge-item">✓ Fast 24-Hr Matching</div>
+          <div class="hero-badge-item">✓ Free Trial Lesson</div>
+          <div class="hero-badge-item">✓ All Boards, O/A-Levels & MDCAT</div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="request-tutor.html" class="btn btn-primary btn-lg">Request a Tutor Now</a>
+          <a href="rates.html" class="btn btn-outline btn-lg">Calculate Tuition Rates</a>
+        </div>
+      </div>
+
+      <!-- Quick Request Form Widget -->
+      <div class="hero-card">
+        <h3>⚡ Fast Tutor Matching</h3>
+        <p>Tell us what you need, get 3 tailored tutor profiles today!</p>
+        
+        <form action="request-tutor.html" method="GET">
+          <div class="form-group">
+            <label for="quickLevel">Student Level</label>
+            <select id="quickLevel" name="level" class="form-control" required>
+              <option value="" disabled selected>Select Academic Level</option>
+              <option value="Primary (Class 1 - 5)">Primary (Class 1 - 5)</option>
+              <option value="Middle (Class 6 - 8)">Middle (Class 6 - 8)</option>
+              <option value="Matric / SSC (9th - 10th Class)">Matric / SSC (9th - 10th Class)</option>
+              <option value="FSc / ICS / I.Com (11th - 12th)">FSc / ICS / I.Com (11th - 12th)</option>
+              <option value="O-Level (Cambridge / Edexcel)">O-Level (Cambridge / Edexcel)</option>
+              <option value="A-Level (Cambridge / Edexcel)">A-Level (Cambridge / Edexcel)</option>
+              <option value="Entry Test (MDCAT / ECAT / NET)">Entry Test (MDCAT / ECAT / NET)</option>
+              <option value="Quran, Tajweed & Islamic Studies">Quran, Tajweed & Islamic Studies</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quickSubject">Subject(s)</label>
+            <input type="text" id="quickSubject" name="subject" class="form-control" placeholder="e.g. Mathematics, Physics, Chemistry, Biology, English" required />
+          </div>
+
+          <div class="form-group">
+            <label for="quickRegion">City / Region in Pakistan</label>
+            <select id="quickRegion" name="region" class="form-control" required>
+              <option value="" disabled selected>Select Your City</option>
+              <option value="Lahore">Lahore (DHA, Gulberg, Johar Town, Model Town, Bahria)</option>
+              <option value="Islamabad">Islamabad (F-6, F-7, F-8, F-10, F-11, DHA, Bahria)</option>
+              <option value="Rawalpindi">Rawalpindi (Bahria Town, Saddar, Satellite Town, Westridge)</option>
+              <option value="Karachi">Karachi (Clifton, DHA, Gulshan, PECHS, North Nazimabad)</option>
+              <option value="Faisalabad">Faisalabad (Madina Town, Peoples Colony, Kohinoor)</option>
+              <option value="Multan">Multan (Cantt, Bosan Road, Gulgasht)</option>
+              <option value="Peshawar">Peshawar (Hayatabad, University Town, Cantt)</option>
+              <option value="Online">Online Tuition (Anywhere in Pakistan / Overseas)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
+            Find Suitable Tutors →
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Statistics Counters -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h2>50,000+</h2>
+          <p>Verified Home Tutors</p>
+        </div>
+        <div class="stat-item">
+          <h2>98.4%</h2>
+          <p>Parent Satisfaction Rate</p>
+        </div>
+        <div class="stat-item">
+          <h2>100+</h2>
+          <p>Daily New Tuition Jobs</p>
+        </div>
+        <div class="stat-item">
+          <h2>$0</h2>
+          <p>Agency Fee for Parents</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simple 3-Step Process</span>
+        <h2 class="section-title">How Home Tutor Works</h2>
+        <p class="section-desc">Experience Pakistan's smoothest and most efficient tutor matching service.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Submit Your Request</h3>
+          <p>Fill out our simple 2-minute request form or WhatsApp our coordinators with your subject, level, location, and budget.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Receive Tutor Profiles</h3>
+          <p>Within 1 to 12 hours, your dedicated coordinator will shortlist 3-5 verified tutor profiles matching your specific needs.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Start Learning</h3>
+          <p>Select your favorite tutor and begin the first lesson. No contract, no upfront deposit, and 100% satisfaction guarantee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Top Tutors -->
+  <section class="section" style="background: var(--bg-white);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Top-Rated Educators</span>
+        <h2 class="section-title">Featured Home Tutors</h2>
+        <p class="section-desc">Hand-picked, background-checked tutors with exceptional student score improvements.</p>
+      </div>
+
+      <div class="tutor-grid" id="tutorsGrid">
+        <!-- Loaded dynamically from api.js / Spring Boot backend -->
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="tutors.html" class="btn btn-blue btn-lg">Browse All 50,000+ Tutors →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Tuition Assignments Preview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">For Tutors</span>
+        <h2 class="section-title">Live Tuition Assignments</h2>
+        <p class="section-desc">Browse recent home tuition jobs across Pakistan posted by parents looking for teachers today.</p>
+      </div>
+
+      <div class="assignment-grid" id="assignmentsContainer">
+        <!-- Loaded dynamically from api.js / Spring Boot backend -->
+      </div>
+
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="assignments.html" class="btn btn-primary">View All Available Jobs in Pakistan →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tuition Rates Overview & Calculator Promo -->
+  <section class="section" style="background: var(--bg-white);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+        <div>
+          <span class="section-tag">Transparent Pricing</span>
+          <h2 class="section-title" style="text-align: left;">Pakistan Tuition Rates Guideline</h2>
+          <p class="section-desc" style="text-align: left; margin-bottom: 25px;">
+            We believe in complete transparency. Our rates strictly follow fair market home tuition benchmarks in Pakistan based on tutor qualifications and teaching experience.
+          </p>
+          <ul style="list-style: none; margin-bottom: 30px;">
+            <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+              <span style="color: var(--accent-green); font-weight: bold;">✓</span>
+              <div><strong>Part-Time Student Tutors:</strong> PKR 800 - 1,500/hr (LUMS, NUST, FAST, IBA undergrads)</div>
+            </li>
+            <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+              <span style="color: var(--accent-green); font-weight: bold;">✓</span>
+              <div><strong>Full-Time Professional Tutors:</strong> PKR 1,500 - 3,500/hr (Dedicated full-time teachers)</div>
+            </li>
+            <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+              <span style="color: var(--accent-green); font-weight: bold;">✓</span>
+              <div><strong>Certified School/College Faculty:</strong> PKR 3,000 - 6,000+/hr (Aitchison, Beaconhouse, LGS, APS faculty)</div>
+            </li>
+          </ul>
+          <a href="rates.html" class="btn btn-blue">Explore Full Pakistan Rates Guide & Calculator →</a>
+        </div>
+
+        <div class="calc-card">
+          <h3 style="margin-bottom: 16px;">💡 Quick Tuition Cost Calculator (PKR)</h3>
+          <form id="rateCalcForm">
+            <div class="form-group">
+              <label>Academic Level</label>
+              <select id="calcLevel" class="form-control">
+                <option value="Primary (Class 1 - 5)">Primary (Class 1 - 5)</option>
+                <option value="Middle (Class 6 - 8)">Middle (Class 6 - 8)</option>
+                <option value="Matric / SSC (9th - 10th Class)">Matric / SSC (9th - 10th)</option>
+                <option value="FSc / ICS / I.Com (11th - 12th)">FSc / ICS (11th - 12th)</option>
+                <option value="O-Level (Cambridge / Edexcel)" selected>O-Level (Cambridge)</option>
+                <option value="A-Level (Cambridge / Edexcel)">A-Level (Cambridge)</option>
+                <option value="Entry Test (MDCAT / ECAT / NET)">Entry Test (MDCAT / ECAT)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Tutor Category</label>
+              <select id="calcTutorType" class="form-control">
+                <option value="PART_TIME">Part-Time / Student Tutor (LUMS/NUST)</option>
+                <option value="FULL_TIME" selected>Full-Time Professional Tutor</option>
+                <option value="MOE_EX_CURRENT">Certified School/College Teacher</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+              <div class="form-group">
+                <label>Lessons / Week</label>
+                <input type="number" id="calcLessons" class="form-control" value="3" min="1" max="7" />
+              </div>
+              <div class="form-group">
+                <label>Hours / Lesson</label>
+                <input type="number" id="calcHours" class="form-control" value="1.5" step="0.5" min="1" max="4" />
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              <div style="font-size: 0.9rem; opacity: 0.9;">Estimated Monthly Investment</div>
+              <div class="calc-price" id="resMonthlyCost">PKR 25,000 - 35,000</div>
+              <div style="font-size: 0.85rem; opacity: 0.9;" id="resHourlyRate">Hourly: PKR 2,000 - 3,000 / hr</div>
+              <div style="font-size: 0.8rem; margin-top: 8px; opacity: 0.8;" id="resRecommendation">100% Free tutor matching service for parents across Pakistan.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Proven Results</span>
+        <h2 class="section-title">What Pakistani Parents Say</h2>
+        <p class="section-desc">Over 15,000 students across Pakistan have improved their academic performance with Home Tutor.</p>
+      </div>
+
+      <div class="testimonial-grid" id="testimonialsContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Boost Your Child's Academic Confidence?</h2>
+      <p>Request a tutor in under 2 minutes. Free consultation, zero agency commissions, and 24-hour turnaround.</p>
+      <div class="btn-group">
+        <a href="request-tutor.html" class="btn btn-primary btn-lg">Request a Tutor Now</a>
+        <a href="https://wa.me/923087361799" target="_blank" class="btn btn-outline btn-lg" style="color: white; border-color: white;">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: white; margin-bottom: 16px;">
+            <div class="logo-icon">🎓</div>
+            Home <span>Tutor</span>
+          </a>
+          <p style="color: #94a3b8; margin-bottom: 20px;">
+            Pakistan's leading home & online tuition platform. Connecting parents and students with passionate, highly qualified private tutors across Islamabad, Rawalpindi, Lahore, Karachi, and all of Pakistan.
+          </p>
+          <div class="footer-contact-info">
+            <p>📍 <strong>Head Office:</strong> Blue Area, Islamabad, Pakistan</p>
+            <p>🏢 <strong>Regional Branches:</strong> Lahore (DHA), Karachi (Clifton)</p>
+            <p>📞 <strong>Hotline:</strong> <a href="tel:+923087361799" style="color: #bae6fd;">+92 308 7361799</a></p>
+            <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/923087361799" target="_blank" style="color: #bae6fd;">+92 308 7361799</a></p>
+            <p>✉️ <strong>Email:</strong> contact@hometutor.pk</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>For Parents</h4>
+          <ul>
+            <li><a href="request-tutor.html">Request a Tutor</a></li>
+            <li><a href="tutors.html">Browse Verified Tutors</a></li>
+            <li><a href="rates.html">Tuition Rates Guide (PKR)</a></li>
+            <li><a href="rates.html">Tuition Fee Calculator</a></li>
+            <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>For Tutors</h4>
+          <ul>
+            <li><a href="assignments.html">Tuition Jobs Board (Pakistan)</a></li>
+            <li><a href="become-tutor.html">Tutor Registration</a></li>
+            <li><a href="become-tutor.html#benefits">Why Join Us</a></li>
+            <li><a href="admin.html">Admin Panel Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Academic Levels</h4>
+          <ul>
+            <li><a href="tutors.html?level=Matric">Matric / SSC (9th - 10th)</a></li>
+            <li><a href="tutors.html?level=FSc">FSc Pre-Medical & Pre-Eng</a></li>
+            <li><a href="tutors.html?level=O-Level">O-Level & A-Level (Cambridge)</a></li>
+            <li><a href="tutors.html?level=MDCAT">MDCAT & ECAT Entry Test</a></li>
+            <li><a href="tutors.html?level=Quran">Quran with Tajweed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Home Tutor. All rights reserved.</p>
+        <p>Built with Spring Boot (Kotlin) & Modern Web Technologies.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/923087361799" target="_blank" class="whatsapp-float" title="Chat with Tuition Coordinator">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+    <span>WhatsApp Coordinator</span>
+  </a>
+
+  <!-- Tutor Request Modal -->
+  <div class="modal-overlay" id="tutorModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close modal">×</button>
+      <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 20px;">
+        <img id="modalTutorAvatar" src="" alt="Tutor" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+        <div>
+          <h3 id="modalTutorName">Tutor Name</h3>
+          <p id="modalTutorTitle" style="font-size: 0.85rem; color: var(--text-muted);"></p>
+          <p id="modalTutorRate" style="font-weight: 700; color: var(--primary);"></p>
+        </div>
+      </div>
+
+      <form id="modalRequestForm">
+        <input type="hidden" id="modalTutorId" />
+        <div class="form-group">
+          <label>Your Name (Parent)</label>
+          <input type="text" id="modalParentName" class="form-control" required placeholder="e.g. Mrs. Stephanie Tan" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number / WhatsApp</label>
+          <input type="tel" id="modalParentPhone" class="form-control" required placeholder="e.g. +65 9123 4567" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="modalParentEmail" class="form-control" placeholder="e.g. parent@gmail.com" />
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label>Student Level</label>
+            <input type="text" id="modalStudentLevel" class="form-control" required placeholder="e.g. Secondary 3" />
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" id="modalSubjects" class="form-control" required placeholder="e.g. Pure Physics" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>City & Area in Pakistan</label>
+          <input type="text" id="modalLocation" class="form-control" required placeholder="e.g. DHA Phase 5, Lahore or F-10, Islamabad" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 15px;">
+          Confirm & Request Tutor
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/rates.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Load featured tutors (first 3) with XSS escaping
+      const tutors = await api.getTutors();
+      const featured = tutors.slice(0, 3);
+      const container = document.getElementById('tutorsGrid');
+      if (container) {
+        container.innerHTML = featured.map(tutor => `
+          <div class="tutor-card">
+            <div class="tutor-header">
+              <img src="${escapeHtml(tutor.avatarUrl)}" alt="${escapeHtml(tutor.name)}" class="tutor-avatar" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'" />
+              <div class="tutor-info">
+                <h3>${escapeHtml(tutor.name)} ${tutor.verified ? '<span class="verified-icon">✓</span>' : ''}</h3>
+                <p class="tutor-title">${escapeHtml(tutor.title)}</p>
+                <div class="tutor-rating">
+                  <span>★ ${Number(tutor.rating).toFixed(2)}</span>
+                  <span style="color: var(--text-muted); font-weight: normal;">(${Number(tutor.reviewCount)} reviews)</span>
+                </div>
+              </div>
+            </div>
+            <div style="font-size: 0.85rem; color: #475569; margin-bottom: 12px;">
+              🎓 ${escapeHtml(tutor.education)}
+            </div>
+            <div class="tutor-tags">
+              ${tutor.subjects.map(s => `<span class="tutor-tag">${escapeHtml(s)}</span>`).join('')}
+            </div>
+            <p class="tutor-bio">${escapeHtml(tutor.bio)}</p>
+            <div class="tutor-footer">
+              <div class="tutor-rate">PKR ${Number(tutor.hourlyRate).toLocaleString()} <span>/ hr</span></div>
+              <a href="request-tutor.html?tutor=${Number(tutor.id)}" class="btn btn-primary btn-sm">Request Tutor</a>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Load 3 recent assignments with XSS escaping
+      const assignments = await api.getAssignments();
+      const recentJobs = assignments.slice(0, 3);
+      const jobContainer = document.getElementById('assignmentsContainer');
+      if (jobContainer) {
+        jobContainer.innerHTML = recentJobs.map(a => `
+          <div class="assignment-card">
+            <div class="assignment-main">
+              <div class="assignment-header">
+                <span class="assignment-code">${escapeHtml(a.code)}</span>
+                <span class="badge badge-green">OPEN</span>
+                <span style="font-size: 0.82rem; color: var(--text-muted); margin-left: auto;">
+                  👥 ${Number(a.applicationsCount || 0)} applied
+                </span>
+              </div>
+              <h3 class="assignment-title">${escapeHtml(a.level)} - ${escapeHtml(a.subject)}</h3>
+              <div class="assignment-details">
+                <div class="assignment-detail-item">📍 ${escapeHtml(a.region)} (${escapeHtml(a.locationDetail || 'Near Main Area')})</div>
+                <div class="assignment-detail-item">⏰ ${escapeHtml(a.frequency)}</div>
+                <div class="assignment-detail-item">🎓 ${escapeHtml(formatTutorType(a.preferredTutorType))}</div>
+              </div>
+            </div>
+            <div class="assignment-action">
+              <div class="assignment-rate-display">PKR ${Number(a.ratePerHour).toLocaleString()} <span style="font-size: 0.85rem; color: var(--text-muted);">/ hr</span></div>
+              <a href="assignments.html" class="btn btn-primary btn-sm">Apply for Job</a>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Load Testimonials with XSS escaping
+      const reviews = await api.getTestimonials();
+      const testContainer = document.getElementById('testimonialsContainer');
+      if (testContainer) {
+        testContainer.innerHTML = reviews.map(r => `
+          <div class="testimonial-card">
+            <div class="grade-jump-pill">
+              📈 Jumped from <strong>${escapeHtml(r.beforeGrade)}</strong> to <strong>${escapeHtml(r.afterGrade)}</strong>
+            </div>
+            <p class="review-quote">"${escapeHtml(r.reviewText)}"</p>
+            <div class="reviewer-profile">
+              <img src="${escapeHtml(r.avatarUrl)}" alt="${escapeHtml(r.clientName)}" class="reviewer-avatar" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80'" />
+              <div>
+                <strong style="color: var(--text-dark); display: block;">${escapeHtml(r.clientName)}</strong>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">${escapeHtml(r.role)}</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
