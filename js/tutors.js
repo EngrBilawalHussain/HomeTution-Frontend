@@ -50,8 +50,10 @@ function renderTutors(tutors) {
   }
 
   container.innerHTML = tutors.map(tutor => {
-    const subjectsHtml = tutor.subjects.map(s => `<span class="tutor-tag">${escapeHtml(s)}</span>`).join('');
-    const levelsHtml = tutor.levels.map(l => `<span class="tutor-tag" style="background:#e0f2fe; color:#0369a1;">${escapeHtml(l)}</span>`).join('');
+    const rawSubjects = Array.isArray(tutor.subjects) ? tutor.subjects : (tutor.subjects ? String(tutor.subjects).split(',') : []);
+    const rawLevels = Array.isArray(tutor.levels) ? tutor.levels : (tutor.levels ? String(tutor.levels).split(',') : []);
+    const subjectsHtml = rawSubjects.map(s => `<span class="tutor-tag">${escapeHtml(s.trim())}</span>`).join('');
+    const levelsHtml = rawLevels.map(l => `<span class="tutor-tag" style="background:#e0f2fe; color:#0369a1;">${escapeHtml(l.trim())}</span>`).join('');
     
     let badgeClass = 'badge-blue';
     if (tutor.tutorType === 'MOE_EX_CURRENT') badgeClass = 'badge-orange';

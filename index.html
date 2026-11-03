@@ -468,7 +468,7 @@
               🎓 ${escapeHtml(tutor.education)}
             </div>
             <div class="tutor-tags">
-              ${tutor.subjects.map(s => `<span class="tutor-tag">${escapeHtml(s)}</span>`).join('')}
+              ${(Array.isArray(tutor.subjects) ? tutor.subjects : (tutor.subjects ? String(tutor.subjects).split(',') : [])).map(s => `<span class="tutor-tag">${escapeHtml(s.trim())}</span>`).join('')}
             </div>
             <p class="tutor-bio">${escapeHtml(tutor.bio)}</p>
             <div class="tutor-footer">
