@@ -1,17 +1,70 @@
-/* Responsive Media Queries */
+/* ==============================================================================
+   Home Tutor Pakistan - Comprehensive Responsive Multi-Device Stylesheet
+   Devices Supported:
+   - Ultra-wide & Desktop (> 1200px)
+   - Laptops & Tablets Landscape (1024px - 1200px)
+   - Tablets & iPad Portrait (768px - 1024px)
+   - Large Mobile & Phablets (480px - 768px)
+   - Compact Mobile (<= 480px: iPhone SE, Galaxy S, 320px-414px)
+   ============================================================================== */
 
-/* Hamburger Button */
+/* Base Layout Helpers */
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.tutors-page-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.tutors-sidebar {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  position: sticky;
+  top: 95px;
+  box-shadow: var(--shadow-sm);
+}
+
+.rates-promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.tutor-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.assignments-filter-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+}
+
+/* Hamburger Navigation Toggle Button */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 28px;
-  height: 24px;
+  width: 32px;
+  height: 26px;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
-  z-index: 101;
+  padding: 2px;
+  z-index: 1001;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger span {
@@ -19,11 +72,11 @@
   height: 3px;
   background-color: var(--text-dark);
   border-radius: 2px;
-  transition: var(--transition);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 6px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -31,24 +84,135 @@
 }
 
 .hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -6px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Tablet (max-width: 992px) */
+/* ==============================================================================
+   1. TABLET & LAPTOP BREAKPOINT (max-width: 1080px)
+   ============================================================================== */
+@media (max-width: 1080px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar .container {
+    height: 70px;
+  }
+
+  /* Full-screen Slide-down / Fixed Mobile Drawer */
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 24px 20px 40px;
+    align-items: stretch;
+    gap: 8px;
+    display: none;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e293b;
+    border-radius: 8px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .nav-menu .nav-link:hover,
+  .nav-menu .nav-link.active {
+    background: #f0f9ff;
+    color: var(--primary);
+  }
+
+  .nav-menu .nav-link.active::after {
+    display: none; /* Hide bottom dot in vertical drawer list */
+  }
+
+  .nav-actions {
+    display: none; /* Hidden from top navbar bar; rendered in mobile drawer */
+  }
+
+  .nav-menu.open .nav-actions-mobile {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 2px dashed #e2e8f0;
+  }
+
+  .nav-menu.open .nav-actions-mobile .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* ==============================================================================
+   2. MID-TABLET BREAKPOINT (max-width: 992px)
+   ============================================================================== */
 @media (max-width: 992px) {
   .hero .container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+  }
+
+  .hero-card {
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .tutors-page-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .tutors-sidebar {
+    position: static;
+  }
+
+  .rates-promo-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .tutor-tiers-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 25px;
   }
 
   .steps-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 20px;
   }
 
   .footer-grid {
@@ -73,86 +237,244 @@
   }
 }
 
-/* Navigation Breakpoint (max-width: 1080px) */
-@media (max-width: 1080px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 75px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--bg-white);
-    flex-direction: column;
-    padding: 30px 20px;
-    align-items: stretch;
-    gap: 15px;
-    display: none;
-    border-top: 1px solid var(--border-color);
-    box-shadow: var(--shadow-lg);
-    z-index: 999;
-  }
-
-  .nav-menu.open {
-    display: flex;
-  }
-
-  .nav-actions {
-    display: none;
-  }
-
-  .nav-menu.open .nav-actions-mobile {
-    display: flex !important;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
-  }
-}
-
-/* Mobile (max-width: 768px) */
+/* ==============================================================================
+   3. MOBILE PHONES & PHABLETS (max-width: 768px)
+   ============================================================================== */
 @media (max-width: 768px) {
+  /* Prevent iOS zoom on input focus by ensuring at least 16px */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
   .top-bar-left {
     display: none;
   }
 
+  .top-bar {
+    padding: 6px 0;
+    font-size: 0.8rem;
+  }
+
   .top-bar .container {
     justify-content: center;
+    gap: 12px;
+  }
+
+  .top-bar-right {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 35px 0 50px;
   }
 
   .hero-content h1 {
     font-size: 2.1rem;
+    line-height: 1.25;
   }
 
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  .hero-subtitle {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 22px;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .hero-badges {
+    gap: 8px;
+    margin-bottom: 25px;
   }
 
-  .wizard-progress {
-    flex-wrap: wrap;
-    gap: 10px;
+  .hero-badge-item {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .hero-card {
+    padding: 22px 18px;
   }
 
   .tutor-grid {
     grid-template-columns: 1fr;
   }
 
+  .tutor-card {
+    padding: 20px 16px;
+  }
+
+  .assignments-filter-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+    padding: 22px 16px;
+  }
+
+  .rates-table th,
+  .rates-table td {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* Compact Floating WhatsApp button on Mobile */
   .whatsapp-float span {
     display: none;
   }
 
   .whatsapp-float {
-    padding: 14px;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    justify-content: center;
     border-radius: 50%;
-    bottom: 20px;
-    right: 20px;
+    bottom: 18px;
+    right: 18px;
+    font-size: 1.4rem;
+  }
+}
+
+/* ==============================================================================
+   4. SMALL MOBILE SCREENS & TWO-COLUMN FORM STACKING (max-width: 600px)
+   ============================================================================== */
+@media (max-width: 600px) {
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .calc-card {
+    padding: 22px 16px;
+  }
+
+  .login-container-card {
+    padding: 25px 18px;
+    margin: 25px auto 40px;
+  }
+
+  .region-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+
+  .region-tab {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+  }
+
+  .admin-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+
+  .admin-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .wizard-progress {
+    gap: 6px;
+  }
+
+  .wizard-progress::before {
+    display: none; /* Hide background bar line on narrow phones to avoid misalignments */
+  }
+
+  .wizard-step-indicator {
+    padding: 0 4px;
+  }
+
+  .wizard-step-indicator .step-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .wizard-step-indicator .step-label {
+    font-size: 0.72rem;
+    max-width: 70px;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+/* ==============================================================================
+   5. COMPACT PHONES (max-width: 480px: iPhone SE, Galaxy S, 320px-400px)
+   ============================================================================== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .stat-card {
+    padding: 16px 12px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .btn-lg {
+    padding: 12px 20px;
+    font-size: 0.98rem;
+  }
+
+  .top-bar-right a {
+    font-size: 0.76rem;
   }
 }

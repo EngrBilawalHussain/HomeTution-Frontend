@@ -25,6 +25,14 @@ function initNavbar() {
         navMenu.classList.remove('open');
       }
     });
+
+    // Close when clicking any nav link inside drawer
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('open');
+      });
+    });
   }
 }
 
